@@ -1,0 +1,107 @@
+﻿
+<style>
+    .error {
+        color: red;
+    }
+</style>
+
+<div class="header">
+    <h1 class="page-title">New Customer</h1>
+    <ul class="breadcrumb">
+        <li><a href="#Customer/List">Customer List</a> </li>
+        <li class="active">New Customer</li>
+    </ul>
+</div>
+
+<div class="main-content">
+
+    <div class="row">
+        <div class="col-md-4">
+            <form name="addForm">
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" width="600" name="firstName" placeholder="First Name" ng-model="customer.FirstName" required />
+                    <small class="error" ng-show="submitted && addForm.firstName.$error.required">
+                        First Name is required
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" name="lastName" class="form-control" placeholder="Last Name" ng-model="customer.LastName" required />
+                    <small class="error" ng-show="submitted && addForm.lastName.$error.required">
+                        Last Name is required
+                    </small>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+
+                    <input type="text" name="phoneNumber" class="form-control" placeholder="Phone Number" ng-model="customer.PhoneNumber" required />
+                    <small class="error" ng-show="submitted && addForm.phoneNumber.$error.required">
+                        Phone Number is required
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" name="country" class="form-control" placeholder="Country" ng-model="customer.Country" required />
+                    <small class="error" ng-show="submitted && addForm.country.$error.required">
+                        Country is required
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label>State</label>
+                    <input type="text" name="state" class="form-control" placeholder="State" ng-model="customer.State" required />
+                    <small class="error" ng-show="submitted && addForm.state.$error.required">
+                        State is required
+                    </small>
+                </div>
+
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea rows="3" class="form-control" name="address" placeholder="Street Address" ng-model="customer.StreetAddress" required></textarea>
+                    <small class="error" ng-show="submitted && addForm.address.$error.required">
+                        Street Address is required
+                    </small>
+                </div>
+            </form>
+
+            <div class="btn-toolbar list-toolbar">
+                <button class="btn btn-primary" ng-click="save()"><i class="fa fa-save"></i> Save</button>
+                <input type="button" value="Cancel" ng-click="cancel()" class="btn btn-danger" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h4 class="modal-title">Add Customer Confirmation</h4>
+        </div>
+        <div class="modal-body">
+            New Customer Detail Has Been Added Successfully.
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" ng-click="ok()">OK</button>
+        </div>
+    </script>
+
+    <script>
+
+        function openModel(size) {
+            var modalInstance = $modal.open({
+                templateUrl: 'myModalContent.html',
+                controller: ModalInstanceCtrl,
+                size: size
+            });
+        };
+
+    </script>
+
+    <footer>
+        <hr>
+        <p>© 2014 - <a href="#" target="_blank">Single Page Application</a></p>
+    </footer>
+</div>
+
+

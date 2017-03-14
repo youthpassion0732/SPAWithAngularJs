@@ -1,0 +1,87 @@
+﻿
+<div class="header">
+    <h1 class="page-title">{{customer.FirstName}} {{customer.LastName}}</h1>
+    <ul class="breadcrumb">
+        <li><a href="#/">Dashboard</a> </li>
+        <li><a href="#Customer/Add">New Customer</a> </li>
+        <li class="active">{{customer.FirstName}} {{customer.LastName}}</li>
+    </ul>
+</div>
+
+<div class="main-content">
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="row">
+                <div class="col-md-12 col-sm-5">
+                    <img src="~/blank-profile.jpg" style="max-width:100%;border-top-left-radius: 3px;border-top-right-radius: 3px;">
+                    <div class="label label-primary img-label padding-top-small padding-bottom-small">Customer</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Customer Info</div>
+                        <div class="panel-body">
+                            <ul class="list-unstyled list-info">
+                                <li>
+                                    <span class="text-info fa fa-user fa-fw"></span>
+                                    {{customer.FirstName}} {{customer.LastName}}
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-envelope fa-fw"></span>
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-envelope fa-fw"></span>
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-phone fa-fw"></span>
+                                    {{customer.PhoneNumber}}
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-envelope fa-fw"></span>
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-envelope fa-fw"></span>
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-university fa-fw"></span>
+                                    {{customer.Country}}
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-envelope fa-fw"></span>
+                                </li>
+                                <li>
+                                    <span class="ttext-info fa fa-envelope fa-fw"></span>
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-university fa-fw"></span>
+                                    {{customer.State}}
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-envelope fa-fw"></span>
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-envelope fa-fw"></span>
+                                </li>
+                                <li>
+                                    <span class="text-info fa fa-home fa-fw"></span>
+                                    {{customer.StreetAddress}}
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <hr>
+    <p>© 2014 - <a href="#" target="_blank">Single Page Application</a></p>
+</footer>
